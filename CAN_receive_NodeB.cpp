@@ -40,14 +40,14 @@ int main() {
 
     // CAN ID filter setup
     struct can_filter rfilter[1];
-    rfilter[0].can_id = 0x100;
+    rfilter[0].can_id = 0x000;
     rfilter[0].can_mask = 0x700;
     if (setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter)) < 0) {
         perror("Setsockopt");
         return 1;
     }
 
-    std::cout << "Node B: Waiting to receive CAN messages with ID from 0x100 to 0x199 ..." << std::endl;
+    std::cout << "Node B: Waiting to receive CAN messages with ID from 0x000 to 0x099 ..." << std::endl;
 
     while (true) {
         int nbytes = read(s, &frame, sizeof(frame));

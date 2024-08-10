@@ -1,3 +1,5 @@
+#include <cstdio>
+#include <ios>
 #include <linux/can.h>
 #include <linux/can/raw.h>
 #include <net/if.h>
@@ -26,7 +28,7 @@ int main() {
         perror("SIOCGIFINDEX");
         return 1;
     }
-
+    
     // Assign address for socket CAN
     addr.can_family = AF_CAN;
     addr.can_ifindex = ifr.ifr_ifindex;
@@ -38,14 +40,14 @@ int main() {
 
     // CAN ID filter setup
     struct can_filter rfilter[1];
-    rfilter[0].can_id = 0x100;
+    rfilter[0].can_id = 0x300;
     rfilter[0].can_mask = 0x700;
     if (setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter)) < 0) {
         perror("Setsockopt");
         return 1;
     }
 
-    std::cout << "Node C: Waiting to receive CAN messages with ID from 0x100 to 0x199 ..." << std::endl;
+    std::cout << "Node E: Waiting to receive CAN messages with ID from 0x300 to 0x399 ..." << std::endl;
 
     while (true) {
         int nbytes = read(s, &frame, sizeof(frame));
@@ -55,7 +57,7 @@ int main() {
         }
 
         // Print out CAN messages
-        std::cout << "Received CAN message: ID = 0x" << std::hex << frame.can_id << ", Data = ";
+        std::cout << "Received CAN message with ID: 0x" << std::hex << frame.can_id << ", Data = ";
         for (int i = 0; i < frame.can_dlc; i++) {
             std::cout << std::hex << static_cast<int>(frame.data[i]) << " ";
         }
