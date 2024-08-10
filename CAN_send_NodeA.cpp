@@ -10,7 +10,6 @@
 #include <unistd.h>
 #include <vector>
 #include <sstream>
-#include <iomanip>
 
 // Function to send a CAN message
 void sendCANMessage(int s, uint32_t can_id, const std::string& data_str, bool is_hex) {
