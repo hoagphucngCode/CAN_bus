@@ -1,3 +1,5 @@
+#include <cstdio>
+#include <ios>
 #include <linux/can.h>
 #include <linux/can/raw.h>
 #include <net/if.h>
@@ -11,6 +13,7 @@ int main() {
     int s;
     struct sockaddr_can addr;
     struct ifreq ifr;
+    struct can_frame frame;
 
     // Create socket CAN
     s = socket(PF_CAN, SOCK_RAW, CAN_RAW);
@@ -21,8 +24,11 @@ int main() {
 
     // Configure interface CAN
     strcpy(ifr.ifr_name, "vcan0");
-    ioctl(s, SIOCGIFINDEX, &ifr);
-
+    if (ioctl(s, SIOCGIFINDEX, &ifr) < 0) {
+        perror("SIOCGIFINDEX");
+        return 1;
+    }
+    
     // Assign address for socket CAN
     addr.can_family = AF_CAN;
     addr.can_ifindex = ifr.ifr_ifindex;
@@ -32,8 +38,16 @@ int main() {
         return 1;
     }
 
-    struct can_frame frame;
-    std::cout << "Node B: Waiting to receive CAN messages..." << std::endl;
+    // CAN ID filter setup
+    struct can_filter rfilter[1];
+    rfilter[0].can_id = 0x100;
+    rfilter[0].can_mask = 0x700;
+    if (setsockopt(s, SOL_CAN_RAW, CAN_RAW_FILTER, &rfilter, sizeof(rfilter)) < 0) {
+        perror("Setsockopt");
+        return 1;
+    }
+
+    std::cout << "Node B: Waiting to receive CAN messages with ID from 0x100 to 0x199 ..." << std::endl;
 
     while (true) {
         int nbytes = read(s, &frame, sizeof(frame));
@@ -43,12 +57,11 @@ int main() {
         }
 
         // Print out CAN messages
-        std::cout << "Received CAN message with ID: " << frame.can_id << std::endl;
-        std::cout << "Data (decimal): ";
+        std::cout << "Received CAN message with ID: 0x" << std::hex << frame.can_id << ", Data = ";
         for (int i = 0; i < frame.can_dlc; i++) {
-            std::cout << static_cast<int>(frame.data[i]) << " ";
+            std::cout << std::hex << static_cast<int>(frame.data[i]) << " ";
         }
-        std::cout << std::endl;
+        std::cout << std::dec << std::endl;
     }
 
     close(s);
