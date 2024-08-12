@@ -1,0 +1,15 @@
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/appCAN_bus_sim.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/appCAN_bus_sim_qmltyperegistration.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/all_qmltyperegistrations.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/appCAN_bus_sim_other_files.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/appCAN_bus_sim_qmllint.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/all_qmllint.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/appCAN_bus_sim_tooling.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/list_install_components.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/install.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/install/local.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/install/strip.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/appCAN_bus_sim_autogen_timestamp_deps.dir
+/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CMakeFiles/appCAN_bus_sim_autogen.dir
