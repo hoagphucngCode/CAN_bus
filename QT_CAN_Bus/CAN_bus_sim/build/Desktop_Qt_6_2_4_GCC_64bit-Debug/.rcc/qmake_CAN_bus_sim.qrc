@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/CAN_bus_sim">
-    <file alias="qmldir">/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/build/Desktop_Qt_6_2_4_GCC_64bit-Debug/CAN_bus_sim/qmldir</file>
-  </qresource>
-</RCC>
-

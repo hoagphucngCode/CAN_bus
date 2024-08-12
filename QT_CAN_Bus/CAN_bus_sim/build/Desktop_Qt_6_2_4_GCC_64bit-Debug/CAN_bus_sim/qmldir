@@ -1,4 +1,0 @@
-module CAN_bus_sim
-typeinfo appCAN_bus_sim.qmltypes
-prefer :/CAN_bus_sim/
-

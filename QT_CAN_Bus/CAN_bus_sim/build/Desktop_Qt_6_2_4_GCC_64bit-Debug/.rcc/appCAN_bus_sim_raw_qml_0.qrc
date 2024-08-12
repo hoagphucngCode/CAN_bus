@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/CAN_bus_sim/">
-    <file alias="main.qml">/home/fr/Desktop/CAN_Study/QT_CAN_Bus/CAN_bus_sim/main.qml</file>
-  </qresource>
-</RCC>
-
