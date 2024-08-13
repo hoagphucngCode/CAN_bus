@@ -99,7 +99,7 @@ int main() {
 
     // Get user input for multiple messages
     while (true) {
-        std::cout << "Enter CAN ID (type 'done' to fininsh): ";
+        std::cout << "Enter CAN FD ID (type 'done' to fininsh): ";
         std::getline(std::cin, can_id_str);
         if (can_id_str == "done") break;
 
